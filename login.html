@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://maxielitevscripts.github.io/ArcWebsite/login.html -->
+<html lang="en"><script src="blob:https://maxielitevscripts.github.io/9f5464f8-97f5-473d-8f2d-161e3ef9e41c"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ARC Executor</title>
+    <link href="./login_files/css2" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Container for the forms */
+        .login-container, .register-container {
+            background-color: #222;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        /* Inputs */
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 18px;
+            box-sizing: border-box;
+            background-color: #333;
+            border: 1px solid #444;
+            color: #fff;
+        }
+
+        /* Button Styles */
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: 0.5s ease;
+            background-size: 400% 400%;
+        }
+
+        /* Rainbow Button Animation */
+        button:hover {
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Links */
+        .register-link {
+            color: #ff416c;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            color: #ff4b2b;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            .login-container, .register-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            input, button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+    </style>
+<link rel="stylesheet" href="chrome-extension://ihcjicgdanjaechkgeegckofjjedodee/app/content-style.css"><style type="text/css">.video-ads{display:none!important}#player-ads{display:none!important}#watch7-sidebar-ads{display:none!important}#AdSense{display:none!important}#homepage-sidebar-ads{display:none!important}#page-container>#page>#header{display:none!important}#content #page-manager #masthead-ad{display:none!important}#body-container #page-container #video-masthead-iframe{display:none!important}ytd-promoted-sparkles-web-renderer{display:none!important}ytd-compact-promoted-item-renderer{display:none!important}ytd-display-ad-renderer{display:none!important}#feedmodule-PRO{display:none!important}#homepage-chrome-side-promo{display:none!important}#search-pva{display:none!important}#watch-branded-actions{display:none!important}#watch-buy-urls{display:none!important}.carousel-offer-url-container{display:none!important}.promoted-videos{display:none!important}.watch-extra-info-column{display:none!important}.watch-extra-info-right{display:none!important}a[href^="http://www.youtube.com/cthru?"]{display:none!important}</style></head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" style="font-size: 18px;">
+        <input type="password" id="password" placeholder="Password" style="font-size: 18px;">
+        <button onclick="login()">Login</button>
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/login.html#" class="register-link" onclick="showRegister()">Don't have an account? Register</a>
+    </div>
+
+    <div class="register-container" id="register-container" style="display: none;">
+        <h1>Register</h1>
+        <input type="text" id="new-username" placeholder="Username" style="font-size: 18px;">
+        <input type="password" id="new-password" placeholder="Password" style="font-size: 18px;">
+        <button onclick="register()">Register</button>
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/login.html#" class="register-link" onclick="showLogin()">Already have an account? Login</a>
+    </div>
+
+    <script>
+        // Show the login form
+        function showLogin() {
+            document.getElementById('register-container').style.display = 'none';
+            document.querySelector('.login-container').style.display = 'block';
+        }
+
+        // Show the register form
+        function showRegister() {
+            document.querySelector('.login-container').style.display = 'none';
+            document.getElementById('register-container').style.display = 'block';
+        }
+
+        // Simulate login by checking localStorage for saved users
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+            const user = storedUsers.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                alert('Login successful!');
+                window.location.href = 'script-hub.html';  // Redirect to your script hub or homepage
+            } else {
+                alert('Invalid username or password!');
+            }
+        }
+
+        // Simulate registering a new user by saving to localStorage
+        function register() {
+            const username = document.getElementById('new-username').value;
+            const password = document.getElementById('new-password').value;
+
+            if (!username || !password) {
+                alert('Please enter both username and password.');
+                return;
+            }
+
+            const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if the username already exists
+            const existingUser = storedUsers.find(user => user.username === username);
+            if (existingUser) {
+                alert('Username already exists!');
+                return;
+            }
+
+            // Save new user
+            storedUsers.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(storedUsers));
+
+            alert('Registration successful! Please log in.');
+            showLogin();  // Show login screen after registration
+        }
+    </script>
+
+
+</body></html>

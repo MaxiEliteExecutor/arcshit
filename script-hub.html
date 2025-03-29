@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://maxielitevscripts.github.io/ArcWebsite/script-hub.html -->
+<html lang="en"><script src="blob:https://maxielitevscripts.github.io/a55ecf0c-cb6a-4f9d-9a55-6e47388db0c7"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Hub - ARC Executor</title>
+    <link href="./script-hub_files/css2" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background-color: #111;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .nav a:hover {
+            color: #ff416c;
+            transform: scale(1.1);
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .search-bar {
+            margin-bottom: 30px;
+            padding: 10px;
+            width: 50%;
+            max-width: 400px;
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .script {
+            background: #2a2a2a;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            transition: background 0.3s;
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .script:hover {
+            background: #444;
+        }
+
+        .copy-btn {
+            background-color: #ff416c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #ff4b2b;
+        }
+
+        h1, h2 {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .script {
+                width: 90%;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://maxielitevscripts.github.io/ArcWebsite/Arc_Logo-removebg-preview-white.ico" type="image/x-icon">
+<style type="text/css">.video-ads{display:none!important}#player-ads{display:none!important}#watch7-sidebar-ads{display:none!important}#AdSense{display:none!important}#homepage-sidebar-ads{display:none!important}#page-container>#page>#header{display:none!important}#content #page-manager #masthead-ad{display:none!important}#body-container #page-container #video-masthead-iframe{display:none!important}ytd-promoted-sparkles-web-renderer{display:none!important}ytd-compact-promoted-item-renderer{display:none!important}ytd-display-ad-renderer{display:none!important}#feedmodule-PRO{display:none!important}#homepage-chrome-side-promo{display:none!important}#search-pva{display:none!important}#watch-branded-actions{display:none!important}#watch-buy-urls{display:none!important}.carousel-offer-url-container{display:none!important}.promoted-videos{display:none!important}.watch-extra-info-column{display:none!important}.watch-extra-info-right{display:none!important}a[href^="http://www.youtube.com/cthru?"]{display:none!important}</style><link rel="stylesheet" href="chrome-extension://ihcjicgdanjaechkgeegckofjjedodee/app/content-style.css"></head>
+<body>
+    <nav class="nav">
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/firstpage.html">Home</a>
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/downloads.html">Downloads</a>
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/script-hub.html">Script Hub</a>
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/about.html">About</a>
+        <a href="https://maxielitevscripts.github.io/ArcWebsite/contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h1>Script Hub - ARC Executor</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" class="search-bar" placeholder="Search for scripts..." onkeyup="searchScripts()">
+
+        <div class="script" data-title="Auto Clicker" data-description="A simple auto-clicker script.">
+            <h4>Auto Clicker v1.0</h4>
+            <pre>-- Auto Clicker Script --
+
+while true do
+    mouse_click()
+    wait(1)  -- wait for 1 second between clicks
+end
+            </pre>
+            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
+        </div>
+
+        <div class="script" data-title="Speed Hack" data-description="Speed hack script for boosting gameplay.">
+            <h4>Speed Hack v2.1</h4>
+            <pre>-- Speed Hack Script --
+
+function speedHack()
+    while true do
+        set_speed(10)  -- set speed to 10x
+        wait(0.5)
+    end
+end
+speedHack()
+            </pre>
+            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
+        </div>
+
+        <div class="script" data-title="Unlimited Health" data-description="Get unlimited health for games.">
+            <h4>Unlimited Health Mod</h4>
+            <pre>-- Unlimited Health Mod --
+
+function unlimitedHealth()
+    while true do
+        set_health(99999)  -- set health to unlimited
+        wait(1)
+    end
+end
+unlimitedHealth()
+            </pre>
+            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
+        </div>
+
+        <div class="script" data-title="Unlimited Coins" data-description="Unlock unlimited coins in games.">
+            <h4>Unlimited Coins Mod</h4>
+            <pre>-- Unlimited Coins Mod --
+
+function unlimitedCoins()
+    while true do
+        set_coins(999999)  -- set coins to unlimited
+        wait(0.5)
+    end
+end
+unlimitedCoins()
+            </pre>
+            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
+        </div>
+    </div>
+
+    <script>
+        function copyText(button) {
+            const scriptText = button.previousElementSibling.textContent;
+            const textarea = document.createElement("textarea");
+            textarea.value = scriptText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            alert("Script copied to clipboard!");
+        }
+
+        function searchScripts() {
+            const query = document.getElementById("search-bar").value.toLowerCase();
+            const scripts = document.querySelectorAll(".script");
+
+            scripts.forEach(script => {
+                const title = script.getAttribute("data-title").toLowerCase();
+                const description = script.getAttribute("data-description").toLowerCase();
+
+                if (title.includes(query) || description.includes(query)) {
+                    script.style.display = "block";  // Show script if it matches the search
+                } else {
+                    script.style.display = "none";  // Hide script if it doesn't match the search
+                }
+            });
+        }
+    </script>
+
+
+</body></html>
