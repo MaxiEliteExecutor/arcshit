@@ -115,75 +115,25 @@
 <style type="text/css">.video-ads{display:none!important}#player-ads{display:none!important}#watch7-sidebar-ads{display:none!important}#AdSense{display:none!important}#homepage-sidebar-ads{display:none!important}#page-container>#page>#header{display:none!important}#content #page-manager #masthead-ad{display:none!important}#body-container #page-container #video-masthead-iframe{display:none!important}ytd-promoted-sparkles-web-renderer{display:none!important}ytd-compact-promoted-item-renderer{display:none!important}ytd-display-ad-renderer{display:none!important}#feedmodule-PRO{display:none!important}#homepage-chrome-side-promo{display:none!important}#search-pva{display:none!important}#watch-branded-actions{display:none!important}#watch-buy-urls{display:none!important}.carousel-offer-url-container{display:none!important}.promoted-videos{display:none!important}.watch-extra-info-column{display:none!important}.watch-extra-info-right{display:none!important}a[href^="http://www.youtube.com/cthru?"]{display:none!important}</style><link rel="stylesheet" href="chrome-extension://ihcjicgdanjaechkgeegckofjjedodee/app/content-style.css"></head>
 <body>
     <nav class="nav">
-        <a href="firstpage.html">Home</a>
-        <a href="downloads.html">Downloads</a>
-        <a href="script-hub.html">Script Hub</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="/firstpage.html">Home</a>
+        <a href="/downloads.html">Downloads</a>
+        <a href="/script-hub.html">Script Hub</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
     </nav>
     <div class="container">
         <h1>Script Hub - ARC Executor</h1>
 
         <!-- Search Bar -->
         <input type="text" id="search-bar" class="search-bar" placeholder="Search for scripts..." onkeyup="searchScripts()">
-
-        <div class="script" data-title="Auto Clicker" data-description="A simple auto-clicker script.">
-            <h4>Auto Clicker v1.0</h4>
-            <pre>-- Auto Clicker Script --
-
-while true do
-    mouse_click()
-    wait(1)  -- wait for 1 second between clicks
-end
-            </pre>
-            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
-        </div>
-
-        <div class="script" data-title="Speed Hack" data-description="Speed hack script for boosting gameplay.">
-            <h4>Speed Hack v2.1</h4>
-            <pre>-- Speed Hack Script --
-
-function speedHack()
-    while true do
-        set_speed(10)  -- set speed to 10x
-        wait(0.5)
-    end
-end
-speedHack()
-            </pre>
-            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
-        </div>
-
+        
         <div class="script" data-title="Unlimited Health" data-description="Get unlimited health for games.">
             <h4>Unlimited Health Mod</h4>
-            <pre>-- Unlimited Health Mod --
-
-function unlimitedHealth()
-    while true do
-        set_health(99999)  -- set health to unlimited
-        wait(1)
-    end
-end
-unlimitedHealth()
+            <pre>-- ARC GUI
+                
             </pre>
             <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
         </div>
-
-        <div class="script" data-title="Unlimited Coins" data-description="Unlock unlimited coins in games.">
-            <h4>Unlimited Coins Mod</h4>
-            <pre>-- Unlimited Coins Mod --
-
-function unlimitedCoins()
-    while true do
-        set_coins(999999)  -- set coins to unlimited
-        wait(0.5)
-    end
-end
-unlimitedCoins()
-            </pre>
-            <button class="copy-btn" onclick="copyText(this)">Copy Script</button>
-        </div>
-    </div>
 
     <script>
         function copyText(button) {
